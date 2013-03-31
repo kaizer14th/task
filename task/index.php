@@ -74,6 +74,7 @@
 
       if ($pageCount > $rangePages and $one < $pageCount - $rangePages) {
         echo " ... ";
+        $pageCount--;
         echo "<a href='index.php?page=". $pageCount ."'> >> </a>";
       }
 
