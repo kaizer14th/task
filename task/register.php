@@ -6,22 +6,24 @@
     <body>
         <div class="contentM">
             <div class="register">
-                <form method="POST">
+                <form method="POST" >
 
                     Login: <br /> <input name="login" type="text"><br />
 
                     Password: <br /> <input name="password" type="password"><br />
+                    
+                    
 
                     <input name="submit" type="submit" value="Register">
 
                 </form>
             </div>
         <?PHP 
-
+        session_start();
         include ("connect.php");
+        
 
         if(isset($_POST['submit'])) {
-
             $err = array();
 
             $login = trim(mysql_real_escape_string($_POST['login']));

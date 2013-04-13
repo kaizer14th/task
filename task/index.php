@@ -22,6 +22,7 @@
           } else {
             echo "hi, ". $_SESSION["login"] ."<form method=\"POST\" action=\"exit.php\">
               <input name='end' type='hidden' value='1'>
+              <a href='editProfile.php'>Edit Profile </a>
               <input name=\"submit\" type=\"submit\" value=\"Log out\"></form>";
           }
         ?>
@@ -43,7 +44,7 @@
       $rangePages = 4;
       $sql = mysql_fetch_assoc(mysql_query("SELECT COUNT(*) FROM messages "));
       $items = $sql['COUNT(*)'];
-      $pageCount = round($items / $itemsPerPage) + 1;
+      $pageCount = ceil($items / $itemsPerPage) + 1;
       $i = 1;
       $one = $_GET['page'];
       $thr = $rangePages--;
@@ -91,6 +92,7 @@
         $sText = $row['short'];
         // Writing bloc
         echo "<div class='addField com'>
+                <div > <img src='avatar/". $uid .".jpg' width='100' alt='avatar'> </div>
                 <div class='nameM'>". $name ."</div><br />
                 <div class='textN g'>". $sText ."</div>
                 <div class='textM h'>". $fullText ."</div>

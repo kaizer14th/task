@@ -12,6 +12,7 @@
 
         include ("connect.php");
         
+        
         $id = mysql_real_escape_string($_POST['id']);
         $sql = mysql_query("SELECT * FROM `messages` WHERE id='". $id ."'");
         $row = mysql_fetch_assoc($sql);
