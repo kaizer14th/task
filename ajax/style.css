@@ -1,0 +1,25 @@
+/* 
+    Document   : style
+    Created on : Apr 21, 2013, 5:33:04 PM
+    Author     : Oleksandr
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#changeForm {
+    background: #444;
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    display: none;
+}
+
+.click {
+    width: 50px;
+    height: 20px;
+    background: #ff6;
+}
